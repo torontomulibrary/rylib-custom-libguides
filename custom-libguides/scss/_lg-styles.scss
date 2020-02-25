@@ -1,0 +1,85 @@
+/* General Layout Concerns */
+.s-lib-public-side-header h2 {
+  font-family: inherit;
+  line-height: 1.25em;
+  font-weight: 700;
+  font-size: 1.25em;
+  background: var(--ryerson-lightblue);
+  color: var(--white);
+  border-radius: 0;
+  padding: 0.5em 1em;
+  border: 0;
+}
+
+/* s-lib-box styles (Boxes) */
+.s-lib-box {
+  border: 0;
+  background: var(--white);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* s-lib-box title */
+.s-lib-box .s-lib-box-title {
+  font-family: inherit;
+  line-height: 1.25em;
+  font-weight: 700;
+  font-size: 1.25em;
+  background: var(--ryerson-lightblue);
+  color: var(--white);
+  border-radius: 0;
+  padding: 0.5em 1em;
+  border: 0;
+}
+
+/* s-lib-box-content */
+.s-lib-box-content {
+  padding: 1em 1.5em;
+}
+
+/* s-lib-box h3 */
+.s-lib-box h3 {
+  font-family: inherit;
+  line-height: 1.25em;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-top: 1em;
+  margin-bottom: 0.35em;
+}
+
+/* Lists of Databases */
+/* .s-lg-er-item-list, .s-lg-link-list, .s-lg-rss-list, .s-lg-system-list */
+.s-lg-link-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* .s-lg-er-item-list li, .s-lg-link-list li, .s-lg-system-list li, .s-lib-footer */
+.s-lg-link-list li {
+  padding-top: 0;
+}
+
+.s-lg-link-list > li + li {
+  margin-top: 1em;
+}
+
+/* There is no class attached to the database title.. This rule might catch in other places?.. */
+.s-lg-link-list a {
+  font-weight: 700;
+}
+
+.s-lg-tn {
+  margin-left: 0;
+}
+
+.margin-right-sm {
+  margin-right: 1em !important;
+}
+
+.imgshadow {
+  box-shadow: 0 5px 5px 0 silver;
+}
+
+.rightbuffer {
+  margin-right: 2em;
+}

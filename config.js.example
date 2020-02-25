@@ -1,0 +1,13 @@
+const libapps = {}
+libapps.url = 'https://your-admin-url.libapps.com/';
+libapps.email = 'you@example.com';
+libapps.password = 'password';
+
+const libguides = {}
+libguides.homepageUrl = 'https://your-libguides.homepage.com';
+libguides.devGroupId = 55555;
+
+module.exports = {
+  libapps : libapps,
+  libguides: libguides
+};

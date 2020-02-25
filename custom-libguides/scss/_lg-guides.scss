@@ -1,0 +1,134 @@
+// Tabbed Guide Navigation Layout
+#s-lg-tabs-container {
+  .nav-tabs {
+    > li {
+      margin: 0;
+
+      > a {
+        background: var(--ryerson-lightblue);
+      }
+
+      > a,
+      > a.s-lg-tab-top-link,
+      > a.s-lg-tab-top-link:hover {
+        margin: 0;
+        padding: 0.5em 1em;
+      }
+
+      > a.s-lg-tab-drop {
+        padding: 0.5em;
+        border-left: none;
+        &:hover {
+          padding: 0.5em;
+          border-left: none;
+        } 
+      }
+
+      > a:hover {
+        outline: none;
+      }
+
+      + li {
+        margin-left: 1px;
+      }
+
+      // a.dropdown-toggle
+      .dropdown-toggle .caret {
+        border-top-color: var(--white);
+      }
+
+      &:hover {
+        > a {
+          background: var(--ryerson-secondary-color);
+        }
+      }
+    }
+
+    // li.active
+    > .active {
+      > a {
+        color: var(--black);
+        background-color: var(--white);
+      }
+
+      .dropdown-toggle .caret {
+        border-top-color: var(--black);
+      }
+
+      &:hover {
+        > a {
+          color: var(--white);
+          background-color: var(--black);
+        }
+
+        .dropdown-toggle .caret {
+          border-top-color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+// // Sidebar navigation in Guides s-lg-guide-tabs
+// .s-lg-tabs-side #s-lg-tabs-container .nav-tabs > li > a,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-tabs > li > button,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-pills > li > a,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-pills > li > button {
+//   color: var(--black);
+//   background: var(--white);
+//   border: 0;
+//   border-radius: 0;
+//   padding: 0.5em 1em;
+// }
+
+// .s-lg-tabs-side #s-lg-tabs-container .nav-tabs > .active > a,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-tabs > .active > button,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-pills > .active > a,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-pills > .active > button {
+//   color: var(--white);
+//   background: var(--black);
+//   border: 0;
+//   border-radius: 0;
+//   padding: 0.5em 1em;
+// }
+
+// .s-lg-tabs-side #s-lg-tabs-container .nav-tabs > li > a:hover,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-tabs > li > button:hover,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-pills > li > a:hover,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-pills > li > button:hover {
+//   color: var(--white);
+//   background: var(--black);
+//   border: 0;
+//   border-radius: 0;
+//   outline: 0;
+// }
+
+// .s-lg-tabs-side #s-lg-tabs-container .nav-tabs > .active > a:hover,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-pills > .active > a:hover,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-tabs > .active > button:hover,
+// .s-lg-tabs-side #s-lg-tabs-container .nav-pills > .active > button:hover {
+//   color: var(--white);
+//   background: var(--black);
+//   border: 0;
+//   border-radius: 0;
+//   outline: 0;
+// }
+
+// .s-lg-tabs-side .s-lg-boxnav {
+//   margin: 0;
+// }
+
+// .s-lg-tabs-side .s-lg-boxnav .list-group-item {
+//   background: var(--grey);
+//   border-radius: 0;
+//   margin: 1px 0 0 0;
+// }
+
+// .s-lg-tabs-side .s-lg-boxnav .list-group-item > a {
+//   font-weight: 700;
+//   color: var(--black);
+// }
+
+// .s-lg-tabs-side #s-lg-guide-tabs .nav-stacked > li + li {
+//   margin-top: 1px;
+// }

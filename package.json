@@ -1,0 +1,28 @@
+{
+  "name": "rylib_custom_libguides",
+  "version": "0.0.1",
+  "description": "Visual and functional tweaks to LibGuides for Ryerson University Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "stage": "node scripts/deploy.js",
+    "deploy": "node scripts/deploy.js --live"
+  },
+  "keywords": [
+    "LibGuides"
+  ],
+  "author": "Ryerson University Library",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.1",
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "jest-puppeteer": "^4.4.0"
+  },
+  "jest": {
+    "preset": "jest-puppeteer"
+  }
+}

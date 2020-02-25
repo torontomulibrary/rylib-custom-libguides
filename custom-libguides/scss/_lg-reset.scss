@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  font-size: 14px;
+}
+
+// Fix issues with overflow wrapping
+.alert { 
+  overflow-wrap: break-word; 
+}
+
+// Fix issues with LibGuides not using Bootstrap grid correctly
+.s-lib-side-borders {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.s-ui-helptip .popover-title {
+  margin: 0;
+}
+
+// Fix h1 styles 
+#s-lg-guide-header-info h1, .s-lib-header h1 {
+  font-size: 2em;
+}
+
+// Fix h2 styles 
+.s-lib-public-side-header h2 {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.25em;
+  font-size: 1.75em;
+}
+
+// Hides the scroll to top button 
+#s-lib-scroll-top {
+  display: none!important;
+}
+
+//  Shrink the footer text 
+#s-lib-footer-public {
+  font-size: 0.75em;
+  line-height: 1.75em;
+  background: none;
+  border: none;
+}
+
+form[id^="s-lg-frm-guide-widget-"] {
+  display: flex;
+}
+
+form[id^="s-lg-frm-guide-widget-"] .form-control {
+  min-width: 0;
+}

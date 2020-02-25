@@ -1,0 +1,43 @@
+/* 
+  REALLY REALLY BAD CODE BUT WE HAVE NO CHOICE..
+  Trying to format the "Your Friendly Librarians" box but there is no 
+  id or class associated with it, so we take the last div inside of 
+  #s-lg-index-cols. If we ever update the sidebar order, this code must 
+  be updated.
+*/
+
+/* This is the container for the profile images */
+#s-lg-index-cols #col2 div:last-child .txt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0.5em;
+}
+/* This is the profile container */
+#s-lg-index-cols #col2 div:last-child .s-lib-featured-profile-container {
+  width: 50%;
+  margin: 0;
+  padding: 0.5em;
+}
+
+/* This is each profile image */
+#s-lg-index-cols #col2 div:last-child .s-lib-featured-profile-image {
+  margin: 0;
+}
+
+/* This is each profile name */
+#s-lg-index-cols #col2 div:last-child .s-lib-featured-profile-name {
+  margin: 0.5em;
+}
+
+/* This is the more button */
+#s-lg-index-cols #col2 div:last-child .txt + a {
+  margin: 0 1em 1em;
+}
+
+/* Media query to make it look nicer on different screen sizes */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  #s-lg-index-cols #col2 div:nth-child(4) .s-lib-featured-profile-container {
+    width: 25%;
+  }
+}
