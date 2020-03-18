@@ -1,0 +1,60 @@
+mixin gh-toggle-button(icon, target, text)
+  button(
+    type='button'
+    class='navbar-toggle collapsed',
+    data-toggle='collapse'
+    data-target=target
+    aria-expanded='false'
+  )
+    span.sr-only #{text}
+    +fa-icon(icon, text)
+
+mixin ght-navbar
+  nav.navbar
+    .container-fluid
+      .navbar-header
+        +logo
+        .navbar-toggle-wrap
+          +gh-toggle-button('fa-search', '#site-search-form', 'Toggle search form')
+          +gh-toggle-button('fa-bars', '#global-navigation', 'Toggle navigation')
+      
+      #site-search-form.collapse.navbar-collapse.navbar-left
+        .rylib-search-form
+          form.navbar-form(
+            action='/srch.php'
+            method='get'
+          )
+            label.sr-only(
+              for='site-search'
+            ) Search Research Guides
+            input#site-search(
+              type='text'
+              name='s'
+              placeholder='Search Research Guides'
+            )
+            button(
+              aria-label="Search",
+              type="submit"
+            )
+              +fa-icon('fa-search', 'Search')
+
+      #global-navigation.collapse.navbar-collapse.navbar-right
+        ul.nav.navbar-nav(
+          role='navigation'
+        )
+          li: a(href="https://my.ryerson.ca") my.ryerson
+          li: a(href="https://catalogue.library.ryerson.ca/patroninfo") Renew Loans
+
+mixin ghb-navbar
+  .navbar-header
+    a.navbar-brand(
+      href='https://library.ryerson.ca'
+    ) Home
+    +gh-toggle-button('fa-angle-down', '#global-header-botton', 'Toggle navigation')
+  #global-header-botton.collapse.navbar-collapse
+    ul.nav.navbar-nav
+      li: a(href="https://catalogue.library.ryerson.ca/") Catalogue
+      li: a(href="https://library.ryerson.ca/articles/") Articles
+      li: a(href="https://library.ryerson.ca/guides/") Research Help
+      li: a(href="https://library.ryerson.ca/services/") Services
+      li: a(href="https://library.ryerson.ca/info/about-us/") About Us

@@ -13,7 +13,10 @@ const headerLinks = {
 
 describe(('Global Header'), () => {
   beforeAll(async () => {
-    await page.goto(config.libapps.libguides.homepageUrl);
+    await Promise.all([
+      page.goto(config.libguides.homepageUrl),
+      page.waitForNavigation({ waitUntil: 'networkidle2' })
+    ]);
   });
 
   _.forEach( headerLinks, (linkHref, linkText) => {

@@ -1,0 +1,181 @@
+// Tabbed Guide Navigation Layout
+#s-lg-tabs-container {
+  // Tab Layout (across the top)
+  .nav-tabs {
+    > li {
+      margin: 0;
+
+      > a {
+        background: var(--ryerson-lightblue);
+      }
+
+      > a,
+      > a.s-lg-tab-top-link,
+      > a.s-lg-tab-top-link:hover {
+        margin: 0;
+        padding: 0.5em 1em;
+      }
+
+      > a.s-lg-tab-drop {
+        padding: 0.5em;
+        border-left: none;
+        &:hover {
+          padding: 0.5em;
+          border-left: none;
+        } 
+      }
+
+      > a:hover {
+        outline: none;
+      }
+
+      + li {
+        margin-left: 1px;
+      }
+
+      // a.dropdown-toggle
+      .dropdown-toggle .caret {
+        border-top-color: var(--white);
+      }
+
+      &:hover {
+        > a {
+          background: var(--ryerson-secondary-color);
+        }
+      }
+    }
+
+    // li.active
+    > .active {
+      > a {
+        color: var(--black);
+        background-color: var(--white);
+      }
+
+      .dropdown-toggle .caret {
+        border-top-color: var(--black);
+      }
+
+      &:hover {
+        > a {
+          color: var(--white);
+          background-color: var(--black);
+        }
+
+        .dropdown-toggle .caret {
+          border-top-color: var(--white);
+        }
+      }
+    }
+  }
+
+  // Side-Nav Layout (Down the left side)
+  .nav-pills {
+    li {
+      position: relative;
+      background: var(--white);
+
+      &:hover {
+        background: var(--black);
+
+        > a {
+          color: var(--white);
+        }
+      }
+      
+      > a {
+        color: var(--black);
+        background: none;
+        border: 0;
+        border-radius: 0;
+        padding: 10px 15px; 
+        font-weight: 400;
+        text-decoration: underline;
+        
+        &:hover {
+          background: none;
+          border: 0;
+          border-radius: 0;
+          padding: 10px 15px; 
+        }
+  
+        &.s-lg-tab-top-link,
+        &.s-lg-tab-top-link:hover {
+          padding: 10px 15px;
+          padding-right: 2em;
+          float: none;
+          font-weight: 400;
+        }
+  
+        &.s-lg-tab-drop {
+          top: 0;
+          padding: 10px 15px!important;
+          background: none;
+        }
+      }
+    }
+
+    .active > {
+      a,
+      a:hover {
+        color: var(--white);
+        background: var(--black);
+        border: 0;
+        border-radius: 0;
+        padding: 10px 15px; 
+      }
+    }
+  }
+  
+}
+
+// Extra styles for Side-Nav Layout (Down the left side)
+// I don't have any clue why LibGuides coded it like this...
+.s-lg-tabs-side #s-lg-tabs-container {
+  .s-lg-boxnav {
+    background: var(--main-bg-color);
+    border-top: 1px solid var(--main-bg-color);
+    margin-top: 0px;
+    margin-left: 0;
+    padding-left: 20px;
+
+
+    .list-group-item {
+      padding: 10px 15px;
+      border-radius: 0!important;
+      margin: 1px 0 0 0;
+      background: var(--white);
+      border: none;
+
+      > a {
+        color: var(--black);
+        background: none;
+        padding: 0;
+      }
+
+      &:hover {
+        background: var(--black);
+        > a {
+          color: var(--white);
+        }
+      }
+      
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// The same selector is used for both the dropdown menu, and nested menu itmes. Why? Nobody knows.
+.s-lg-tabs-side .s-lg-subtab-ul.nav.nav-pills {
+  background: var(--main-bg-color);
+  border-top: 1px solid var(--main-bg-color);
+  margin-top: 0px;
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+.nav-stacked > li + li {
+  margin-top: 1px;
+}

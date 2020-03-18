@@ -1,5 +1,10 @@
-@import '_lg-reset.scss';
-@import '_lg-homepage.scss';
-@import '_lg-librarians.scss';
-@import '_lg-guides.scss';
-@import '_lg-styles.scss';
+@import '_reset.scss';
+@import '_mixins.scss';
+@import 'lg-common.scss';
+@import 'lg-page-guide.scss';
+@import 'lg-page-homepage.scss';
+@import 'lg-page-search.scss';
+@import 'lg-page-subject.scss';
+@import 'lg-page-profile.scss';
+@import 'lg-page-az.scss';
+@import 'lg-librarians.scss';

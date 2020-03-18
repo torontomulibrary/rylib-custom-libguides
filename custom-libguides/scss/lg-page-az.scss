@@ -1,0 +1,29 @@
+#s-lg-az-results #s-lg-db-name-featured, .s-lg-db-name-featured {
+  margin-bottom: 10px;
+  border-radius: 0;
+  border: none;
+  padding: 0 2rem;
+  background: var(--white); 
+}
+
+.s-lg-db-panel {
+  margin-bottom: 10px;
+  border-radius: 0;
+  border: none;
+  padding: 0 2rem;
+  background: var(--white);
+
+  .s-lg-db-panel-title {
+    @include rylib-widget-heading;
+    margin: 0 -2rem;
+  }
+  
+  .s-lg-az-result {
+    border-bottom: 0;
+    padding: 1em 0;
+    
+    + .s-lg-az-result  {
+      border-top: 1px solid var(--grey);
+    }
+  }
+}

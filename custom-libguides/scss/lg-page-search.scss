@@ -1,0 +1,40 @@
+/** For some reason LibGuides puts their styles at the END of the document so we have to use !important here to override it */
+.s-lg-facet-div-title {
+  // _mixins.scss#14
+  @include rylib-widget-heading-important;
+  border-bottom: none!important
+}
+
+.s-lg-facet-div-content {
+  @include rylib-widget-content-important;
+  
+  > label {
+    margin-top: 5px;
+  }
+}
+
+// clear the search result meta and pagination
+.s-srch-resultlist > strong {
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.s-srch-result {
+  padding: 15px!important;
+  margin: 0!important;
+  border-bottom: 1px solid var(--ryerson-blue)!important;
+}
+
+#s-lg-srch-local {
+  #s-lg-srch-nav-1 {
+    padding: 0!important;
+  }
+  
+  #s-lg-srch-form {
+    width: 100%!important;
+    padding: 10px 0 0!important;
+  }
+}

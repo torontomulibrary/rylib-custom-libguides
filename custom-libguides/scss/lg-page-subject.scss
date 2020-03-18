@@ -1,0 +1,62 @@
+
+
+// Styles for the Tabbed navigation layout
+#s-lg-sb-cols {
+  .nav-tabs {
+    @include rylib-tabs;
+    margin-bottom: 0!important;
+  }
+
+  .tab-content {
+    @include rylib-tabs-content;
+
+    .s-lg-db-panel {
+      background: var(--grey)
+    }
+  }
+}
+
+// Subject Pages Guides Tab Content
+#s-lg-sb-content-guides .s-lib-box-idx-guide-list {
+  .s-lib-box-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    .s-lg-gtitle {
+      order: 0;
+      line-height: 35px;
+
+      a {
+        font-weight: 400!important;
+      }
+    }
+
+    .s-lg-gmeta {
+      order: 1;
+      line-height: 35px;
+    }
+  }
+}
+
+// Subject Pages Databases Tab Content
+#s-lg-sb-content-databases {
+
+  #s-lg-db-name-featured, #s-lg-sb-name-regular {
+    margin-bottom: 1.5rem!important;
+    padding: 0;
+    background: var(--grey);
+
+    .s-lg-db-panel-title {
+      margin: 0;
+    }
+  
+    .s-lib-box {
+      background: transparent;
+    }
+    
+    .s-lib-box-idx-guide-list {
+      margin: 0;
+    }
+  }
+}

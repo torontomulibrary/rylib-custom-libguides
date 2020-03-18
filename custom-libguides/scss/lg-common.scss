@@ -1,13 +1,6 @@
 /* General Layout Concerns */
 .s-lib-public-side-header h2 {
-  font-family: inherit;
-  line-height: 1.25em;
-  font-weight: 700;
-  font-size: 1.25em;
-  background: var(--ryerson-lightblue);
-  color: var(--white);
-  border-radius: 0;
-  padding: 0.5em 1em;
+  @include rylib-widget-heading;
   border: 0;
 }
 
@@ -17,6 +10,10 @@
   background: var(--white);
   border-radius: 0;
   box-shadow: none;
+}
+
+.txt {
+  @include rylib-widget-content;
 }
 
 /* s-lib-box title */
@@ -83,3 +80,53 @@
 .rightbuffer {
   margin-right: 2em;
 }
+
+// Styles the Librarian profile inside of an experts box
+#s-lg-az-experts-div,
+#s-lg-sb-experts-div {
+
+  #s-lg-box-profile {
+
+    .s-lib-box-title { display: none; }
+
+    #s-lg-box-collapse-profile {
+      
+      .s-lib-box-content {
+        padding: 0;
+      }
+
+      .s-lib-profile-image img {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: auto;
+      }
+    }
+  }
+}
+
+// The following are not classes provided in LibGuides, we added it into our own custom layout for the following layouts (under Look & Feel > Page Layout):
+// - Individual Subject Page
+// - Landing Page
+// - Profile Landing Page
+// They wrap the {{content_box_search}}, {{content_box_az}}, {{content_box_help}}, {{content_box_guides}} tokens so they don't look broken.
+.lg-content-box-search {
+  .input-append {
+    padding: 0 1em 1em;
+    background: var(--white);
+
+    form {
+      display: flex;
+    }
+  }
+}
+.lg-content-box-az,
+.lg-content-box-help {
+  background: var(--white);
+  a.btn {
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+}
+// TODO: .lg-content-box-guides

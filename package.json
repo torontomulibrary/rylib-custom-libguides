@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "stage": "node scripts/deploy.js",
-    "deploy": "node scripts/deploy.js --live"
+    "deploy": "node scripts/deploy.js --live && jest"
   },
   "keywords": [
     "LibGuides"
@@ -20,7 +20,9 @@
   },
   "devDependencies": {
     "jest": "^25.1.0",
-    "jest-puppeteer": "^4.4.0"
+    "jest-puppeteer": "^4.4.0",
+    "prettier": "1.19.1",
+    "pug": "^2.0.4"
   },
   "jest": {
     "preset": "jest-puppeteer"

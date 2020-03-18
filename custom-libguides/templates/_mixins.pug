@@ -1,0 +1,9 @@
+mixin mailto-link(email)
+  a(href=email) #{email}
+
+mixin logo
+  a.navbar-brand(href='https://library.ryerson.ca')
+    img(src='https://ryersonlibrary.nyc3.digitaloceanspaces.com/assets/logos/rylib_logo.svg')
+
+mixin fa-icon(iconName, title)
+  i(class='fa' class=iconName, title=title)

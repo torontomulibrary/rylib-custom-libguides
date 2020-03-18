@@ -1,0 +1,33 @@
+#s-lg-profile-cols {
+  // The centre column
+  #col2 {
+    
+    // Guide list on the individual profile pages
+    .s-lib-box-idx-guide-list {
+
+      .s-lib-box-content {
+        padding: 0;
+
+        .s-lg-gtitle {
+          line-height: 35px;
+    
+          a {
+            font-weight: 400!important;
+          }
+        }
+    
+        .s-lg-gmeta {
+          line-height: 35px;
+        }
+      }
+      
+    }
+  }
+
+  // The column with "My Subject Specialties"
+  #col3 {
+    .txt a {
+      font-size: 1em!important;
+    }
+  } 
+}

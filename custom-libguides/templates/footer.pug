@@ -1,0 +1,90 @@
+include _mixins.pug
+include _rylib-footer.pug
+footer.local-footer
+  .container
+    .row 
+      .col-xs-12.col-sm-3
+        h4 Ryerson University Library
+        p
+          a(href='http://www.ryerson.ca/maps/?building=LIB') Library Building
+          br
+          | 350 Victoria Street 2nd Floor
+          abbr(title='Phone') P:
+          | (416 979-5055)
+          br
+          | Fax: (416) 979-5215
+          br
+          | Email: 
+          +mailto-link('refdesk@ryerson.ca')
+        ul.social
+          li: a(href='https://www.facebook.com/RyersonLibrary/') 
+            +fa-icon('fa-facebook')
+          li: a(href='https://twitter.com/ryersonlibrary') 
+            +fa-icon('fa-twitter')
+          li: a(href='https://www.instagram.com/ryersonulibrary') 
+            +fa-icon('fa-instagram')
+          li: a(href='https://www.youtube.com/user/ryersonlibrary') 
+            +fa-icon('fa-youtube')
+          li: a(href='http://apps.library.ryerson.ca/api/merge/') 
+            +fa-icon('fa-rss')
+      .col-xs-12.col-sm-3
+        h4 Links
+        nav.local-footer-links
+          ul.menu
+            li: a(href='https://library.ryerson.ca/services/disabilities/accessibility/') Accessibility Services
+            li: a(href='https://library.ryerson.ca/copyright') Copyright
+            li: a(href='https://library.ryerson.ca/info/about-us#contactus') Contact us
+            li: a(href='https://library.ryerson.ca/siteindex') Site Index
+      .col-xs-12.col-sm-6
+        a(href='https://www.google.ca/maps/place/Ryerson+University+Library+%26+Archives/@43.658187,-79.382865,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34cab2a56619:0x67aab32eaa367e3b!8m2!3d43.658187!4d-79.380671')
+          img.map(src="https://library.ryerson.ca/wp-content/uploads/rula_map.png", alt="Google map")
+
+footer.global-footer-top
+  .container
+    .row.gft-top
+      .col-xs-6.text-left
+        a(href='https://www.ryerson.ca') #[strong Ryerson University]
+      .col-xs-6.text-right
+        a.collapse-toggle.collapsed(
+          href='#gft-collapse'
+          data-toggle='collapse'
+        )
+    #gft-collapse.collapse
+      .row.gft-middle
+        .col-xs-6.text-left
+          | 350 Victoria Street
+          br
+          | Toronto, ON M5B 2K3
+          br
+          abbr(title='Phone') P:
+          | (416) 979-5000
+        .col-xs-6.text-right
+          p Follow Ryerson
+          ul.social
+            li: a(href='https://www.facebook.com/ryersonu')
+              +fa-icon('fa-facebook')
+            li: a(href='https://twitter.com/RyersonU')
+              +fa-icon('fa-twitter')
+            li: a(href='https://www.youtube.com/user/RyersonUTube')
+              +fa-icon('fa-youtube')
+            li: a(href='https://www.linkedin.com/company/ryerson-university')
+              +fa-icon('fa-linkedin')
+        .col-xs-12
+          .row.gft-bottom
+            .col-xs-6.text-left
+              ul.global-footer-links
+                li: a(href='https://ryerson.ca/contact/') Directory
+                li: a(href='https://ryerson.ca/maps/') Maps and Directions
+            .col-xs-6.text-right
+              ul.global-footer-links
+                li: a(href='https://ryerson.ca/jobs/') Careers
+                li: a(href='https://ryerson.ca/media/') Media Room
+
+footer.global-footer-bottom
+  .container
+    .row
+      .col-xs-12
+        ul.global-footer-links
+          li: a(href='https://ryerson.ca/privacy/') Privacy Policy
+          li: a(href='https://ryerson.ca/accessibility/') Accessibility
+          li: a(href='https://www.ryerson.ca/terms') Terms &amp; Conditions
