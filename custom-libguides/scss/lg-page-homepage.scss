@@ -4,37 +4,21 @@
   color: var(--black);
   border-radius: 0;
   margin-bottom: 0;
-
+  
   > ul > li {
     padding: 0;
   }
 
-  .nav .s-lg-index-nav-btn > button {
-    margin: 0;
-    border-radius: 0;
-    background: var(--ryerson-lightblue);
-    color: var(--white);
-    font-weight: 700;
-    padding: 0.5em 1em;
-    &:hover {
-      background: var(--ryerson-secondary-color);
-      color: var(--white);
-    }
-    &:focus {
+  ul.nav-pills {
+    @include rylib-tabs;
+    margin-bottom: 0!important;
+
+    li + li { margin-left: 0; }
+
+    .s-lg-index-nav-btn > button:focus {
       outline: 1px dotted;
     }
   }
-
-  .nav-pills > li.active > button {
-    background-color: var(--white);
-    color: var(--black);
-  }
-
-  .nav-pills > li + li {
-    margin-left: 1px;
-  
-  }
-
   li#s-lg-hp-nav-bottom {
     background: var(--white);
     padding: 1em;
@@ -42,86 +26,87 @@
   }
 }
 
-
 #s-lg-guide-list-controls {
-  background: var(--white);
-  padding: 0 1em;
-}
+  @include rylib-tabs-content;
+  @include rylib-clearfix;
 
-#s-lg-guide-list-controls:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-#s-lg-guide-list-controls #s-lg-index-list-header {
-  margin-top: 0;
-  margin-bottom: 1em;
+  #s-lg-index-list-header {
+    margin: 0;
+  }
 }
 
 #s-lg-index-list {
-  background: var(--white);
-  padding: 0 1em 1em;
+  @include rylib-tabs-content;
 }
+
+// Homepage By Subject / By Type tabs
 #s-lg-index-list .panel-group .panel {
   border-radius: 0;
-}
-
-#s-lg-index-list .panel-default > .panel-heading {
-  color: var(--black);
-  background-color: var(--grey);
   border: 0;
-  border-radius: 0;
+  box-shadow: none;
 }
 
-#s-lg-index-list .panel-default > .panel-heading a {
-  color: var(--link-color);
+#s-lg-index-list .panel-default {
+
+  // The clickable part
+  > .panel-heading {
+    color: var(--black);
+    background-color: var(--grey);
+    border: 0;
+    border-radius: 0;
+
+    a {
+      color: var(--link-color);
+      line-height: 2em;
+    
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    
+      .badge {
+        order: 2;
+        font-size: 1em;
+        line-height: 2em;
+        border-radius: 2em;
+        height: 2em;
+        width: 2em;
+        min-width: 2em;
+        padding: 0;
+      }
+    }
+  }
+  
+  // The content that slides down
+  .panel-body {
+    border: 1px solid var(--grey);
+    border-top: none;
+  
+    a {
+      font-weight: 400;
+    }
+  }
 }
 
-#s-lg-index-list .panel-default .panel-body a {
-  font-weight: 400;
-}
+// All Guides tab
 
-#s-lg-index-list .s-lg-guide-list {
-  list-style: none;
-  padding: 0;
-}
+#s-lg-index-list-guides {
+  margin: 0;
 
-#s-lg-index-list #s-lg-index-list-subjects,
-#s-lg-index-list #s-lg-index-list-types {
-  padding: 0 0.5em;
-}
-#s-lg-index-list #s-lg-index-list-subjects #col-1,
-#s-lg-index-list #s-lg-index-list-subjects #col-2,
-#s-lg-index-list #s-lg-index-list-types #col-1,
-#s-lg-index-list #s-lg-index-list-types #col-2 {
-  padding: 0 0.5em;
-}
+  #col-1 {
+    padding: 0;
 
-#s-lg-index-list-guides a {
-  font-weight: 400;
-}
+    .s-lib-box-content {
+      padding: 0;
 
-#s-lg-index-list-guides .s-lib-box {
-  margin-bottom: 0;
-  padding: 0 0.5em;
+      .s-lg-gtitle {
+  
+        a {
+          font-weight: 400!important;
+        }
+      }
+    }
+  }
 }
-
-#s-lg-index-list-guides .s-lib-box-content {
-  padding: 0;
-}
-
-#s-lg-index-list-guides .s-lib-box:hover {
-  background: var(--black);
-}
-
-#s-lg-index-list-guides .s-lib-box:hover .s-lg-gtitle > a,
-#s-lg-index-list-guides .s-lib-box:hover .btn-link,
-#s-lg-index-list-guides .s-lib-box:hover .s-lg-gtitle > .s-lg-gmeta span {
-  color: var(--white);
-  text-decoration: none;
-}
-
 
 // Homepage sidebar boxes
 #s-lg-index-cols #col2 > div {
