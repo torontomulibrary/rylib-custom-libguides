@@ -1,7 +1,21 @@
+// Mixins
+@mixin rylib-lg-h3 {
+  font-family: inherit;
+  line-height: 1.25em;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-top: 1em;
+  margin-bottom: 0.35em;
+}
+
 /* General Layout Concerns */
 .s-lib-public-side-header h2 {
   @include rylib-widget-heading;
   border: 0;
+}
+
+.s-lib-public-side-header + .txt h3 {
+  @include rylib-lg-h3
 }
 
 /* s-lib-box styles (Boxes) */
@@ -14,18 +28,15 @@
 
 .txt {
   @include rylib-widget-content;
+
+  &.pad-top-sm {
+    padding-top: 1em;
+  }
 }
 
 /* s-lib-box title */
 .s-lib-box .s-lib-box-title {
-  font-family: inherit;
-  line-height: 1.25em;
-  font-weight: 700;
-  font-size: 1.25em;
-  background: var(--ryerson-lightblue);
-  color: var(--white);
-  border-radius: 0;
-  padding: 0.5em 1em;
+  @include rylib-widget-heading;
   border: 0;
 }
 
@@ -36,12 +47,7 @@
 
 /* s-lib-box h3 */
 .s-lib-box h3 {
-  font-family: inherit;
-  line-height: 1.25em;
-  font-weight: 700;
-  font-size: 1.1em;
-  margin-top: 1em;
-  margin-bottom: 0.35em;
+  @include rylib-lg-h3
 }
 
 /* Lists of Databases */
