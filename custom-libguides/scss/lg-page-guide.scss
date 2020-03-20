@@ -2,69 +2,36 @@
 #s-lg-tabs-container {
   // Tab Layout (across the top)
   .nav-tabs {
-    > li {
-      margin: 0;
+    @include rylib-tabs;
+    // margin-bottom: 0!important;
+
+    li {
+      margin-top: 0;
+
+      &.active {
+        background: var(--white);
+        
+        > a, 
+        > a:hover {
+          border: 0;
+        }
+      }
+
+      &.dropdown {
+        display: flex;
+
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+        }
+      }
 
       > a {
-        background: var(--ryerson-lightblue);
-      }
-
-      > a,
-      > a.s-lg-tab-top-link,
-      > a.s-lg-tab-top-link:hover {
-        margin: 0;
-        padding: 0.5em 1em;
-      }
-
-      > a.s-lg-tab-drop {
-        padding: 0.5em;
-        border-left: none;
-        &:hover {
-          padding: 0.5em;
-          border-left: none;
+        &.s-lg-tab-top-link,
+        &.s-lg-tab-top-link:hover {
+          padding: 10px 15px;
+          float: none;
         } 
-      }
-
-      > a:hover {
-        outline: none;
-      }
-
-      + li {
-        margin-left: 1px;
-      }
-
-      // a.dropdown-toggle
-      .dropdown-toggle .caret {
-        border-top-color: var(--white);
-      }
-
-      &:hover {
-        > a {
-          background: var(--ryerson-secondary-color);
-        }
-      }
-    }
-
-    // li.active
-    > .active {
-      > a {
-        color: var(--black);
-        background-color: var(--white);
-      }
-
-      .dropdown-toggle .caret {
-        border-top-color: var(--black);
-      }
-
-      &:hover {
-        > a {
-          color: var(--white);
-          background-color: var(--black);
-        }
-
-        .dropdown-toggle .caret {
-          border-top-color: var(--white);
-        }
       }
     }
   }
