@@ -1,12 +1,10 @@
 @mixin rylib-widget-heading {
+  @include rylib-font-size-h2;
   background: var(--ryerson-blue);
   color: var(--white);
-  line-height: 1.25em;
-  font-size: 1.25em;
-  font-weight: 700;
   margin-bottom: 0;
   margin-top: 0;
-  padding: 1em;
+  padding: 0.5em 1em;
   border-bottom: none;
   
   > a {
