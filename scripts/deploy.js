@@ -1,7 +1,6 @@
 const fs = require('fs');
 const sass = require('node-sass');
 const pug = require('pug');
-// const prettier = require('prettier');
 const config = require('../config');
 const lgClient = require('../lib/libguides-client');
 

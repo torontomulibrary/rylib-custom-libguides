@@ -12,7 +12,7 @@ Node.js scripts to customize our LibGuides installation.
 
 ### `npm run stage`
 
-This script will render the styles, custom header, custom footer and push it to the Development Group.
+This script will render the styles, custom header, custom footer and push it to the configured Development Group.
 
 ### `npm run deploy`
 
