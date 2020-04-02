@@ -19,6 +19,7 @@ const opts = (option) => process.argv.indexOf(option) > -1;
   }).css.toString();
   var jscssCode = pug.renderFile('custom-libguides/templates/jscss.pug', {
     rylibLibGudesStyle : renderedCss.trim(),
+    // TODO: fix this. rylib-common should be bundled as a package dependency or something rather than linked externally
     rylibCommonStyle : 'https://ryersonlibrary.nyc3.digitaloceanspaces.com/rylib-common/v0.2.x/rylib-common.css',
     rylibCommonScript : 'https://ryersonlibrary.nyc3.digitaloceanspaces.com/rylib-common/v0.2.x/rylib-common.js',
     live: opts('--live')
